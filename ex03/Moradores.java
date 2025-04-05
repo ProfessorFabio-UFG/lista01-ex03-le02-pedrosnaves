@@ -1,38 +1,37 @@
-public class Moradores {
-    private static int contador = 1;
+public class Moradores{
     private String nome;
     private String cpf;
-    private String contato;
-    private String data_nasc;
+    private String celular;
+    private String dataNascimento;
     private String sexo;
     private String bloco;
     private int apartamento;
-    private int cod_acesso;
-    private int cod_sequencial;
+    private int codAcesso;
+    private static int codSequencial = 1;
+    private int codMorador;
 
-    public Moradores(String nome, String cpf, String contato, String data_nasc, String sexo, String bloco, int apartamento, int cod_acesso) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.contato = contato;
-        this.data_nasc = data_nasc;
-        this.sexo = sexo;
-        this.bloco = bloco;
-        this.apartamento = apartamento;
-        this.cod_acesso = cod_acesso;
-        this.cod_sequencial = contador;
-        contador++;
+    public Moradores(String nome, String cpf, String celular, String dataNascimento, String sexo, String bloco, int apartamento, int codAcesso){
+       this.nome = nome;
+       this.cpf = cpf;
+       this.celular = celular;
+       this.dataNascimento = dataNascimento;
+       this.sexo = sexo;
+       this.bloco = bloco;
+       this.apartamento = apartamento;
+       this.codAcesso = codAcesso;
+       this.codMorador = codSequencial++;
     }
 
     public String toString() {
-        return "Código: " + cod_sequencial +
-                "\nNome: " + nome +
-                "\nCPF: " + cpf +
-                "\nContato: " + contato +
-                "\nData de Nascimento: " + data_nasc +
-                "\nSexo: " + sexo +
-                "\nBloco: " + bloco +
-                "\nApartamento: " + apartamento +
-                "\nCódigo de Acesso: " + cod_acesso +
-                "\n-----------------------------";
+        return "\nNome: " + this.nome +
+                "\nCPF: " + this.cpf +
+                "\nCelular: " + this.celular +
+                "\nData de nascimento: " + this.dataNascimento +
+                "\nSexo: " + this.sexo +
+                "\nBloco: " + this.bloco +
+                "\nApartamento: " + this.apartamento +
+                "\nCódigo de Acesso: " + this.codAcesso +
+                "\nCod Sequencial: 000" + this.codMorador +
+                "\n___________________\n";
     }
 }
