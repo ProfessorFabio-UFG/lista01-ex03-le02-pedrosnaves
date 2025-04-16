@@ -1,4 +1,4 @@
-public class Moradores{
+public class Morador{
     private String nome;
     private String cpf;
     private String celular;
@@ -10,7 +10,7 @@ public class Moradores{
     private static int codSequencial = 1;
     private int codMorador;
 
-    public Moradores(String nome, String cpf, String celular, String dataNascimento, String sexo, String bloco, int apartamento, int codAcesso){
+    public Morador(String nome, String cpf, String celular, String dataNascimento, String sexo, String bloco, int apartamento, int codAcesso){
        this.nome = nome;
        this.cpf = cpf;
        this.celular = celular;
@@ -22,16 +22,54 @@ public class Moradores{
        this.codMorador = codSequencial++;
     }
 
+    
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getCpf() {
+        return this.cpf;
+    }
+
+    public String getCelular() {
+        return this.celular;
+    }
+
+    public String getDataNasc() {
+        return this.dataNascimento;
+    }
+
+    public String getSexo() {
+        return this.sexo;
+    }
+
+    public String getBloco() {
+        return this.bloco;
+    }
+
+    public int getApartamento() {
+        return this.apartamento;
+    }
+
+    public int getCodAcesso() {
+        return this.codAcesso;
+    }
+
+    public int getCodMorador() {
+        return this.codMorador;
+    }
+
     public String toString() {
-        return "\nNome: " + this.nome +
-                "\nCPF: " + this.cpf +
-                "\nCelular: " + this.celular +
-                "\nData de nascimento: " + this.dataNascimento +
-                "\nSexo: " + this.sexo +
-                "\nBloco: " + this.bloco +
-                "\nApartamento: " + this.apartamento +
-                "\nCódigo de Acesso: " + this.codAcesso +
-                "\nCod Sequencial: 000" + this.codMorador +
+        return "\nNome: " + getNome() +
+                "\nCPF: " + getCpf() +
+                "\nCelular: " + getCelular() +
+                "\nData de nascimento: " + getDataNasc() +
+                "\nSexo: " + getSexo() +
+                "\nBloco: " + getBloco() +
+                "\nApartamento: " + getApartamento() +
+                "\nCódigo de Acesso: " + getCodAcesso() +
+                "\nCod Sequencial: 000" + getCodMorador() +
                 "\n___________________\n";
     }
 }
